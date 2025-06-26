@@ -96,16 +96,28 @@ Final output is a video:
 
 ✨ Ready for visualization, research, or deployment
 
-📁 Directory Structure
-<pre> ├── optimized_models/ │ ├── yolov5n_fp32.onnx # YOLOv5n exported in ONNX FP32 │ └── yolov5n_int8_dynamic.onnx # YOLOv5n quantized to INT8 ONNX ├── inf_vid.mp4 # Downloaded YouTube video for analysis ├── cap_vid_final_audio.mp4 # Final output with scene, object, and speech overlays └── dummy_audio_p1.wav # Dummy audio used for benchmarking Whisper </pre>
+## 📁 Directory Structure
 
-📊 Benchmarking Example
-Model	Avg Latency (ms)	Size (MB)
-GIT (PT)	~XX	~XXX
-YOLOv5n (PT)	~XX	~XX
-YOLOv5n (ONNX FP32)	~XX	~XX
-YOLOv5n (ONNX INT8)	~XX	~XX
-Whisper-tiny	~XX	~XX
+<pre>
+├── optimized_models/
+│   ├── yolov5n_fp32.onnx          # YOLOv5n exported in ONNX FP32
+│   └── yolov5n_int8_dynamic.onnx  # YOLOv5n quantized to INT8 ONNX
+├── inf_vid.mp4                    # Downloaded YouTube video for analysis
+├── cap_vid_final_audio.mp4        # Final output with scene, object, and speech overlays
+└── dummy_audio_p1.wav             # Dummy audio used for benchmarking Whisper
+</pre>
 
-(Values will depend on your hardware and runtime)
+---
+
+## 📊 Benchmarking Example
+
+| Model                 | Avg Latency (ms) | Size (MB) |
+|-----------------------|------------------|-----------|
+| GIT (PT)              | ~XX              | ~XXX      |
+| YOLOv5n (PT)          | ~XX              | ~XX       |
+| YOLOv5n (ONNX FP32)   | ~XX              | ~XX       |
+| YOLOv5n (ONNX INT8)   | ~XX              | ~XX       |
+| Whisper-tiny (PT)     | ~XX              | ~XX       |
+
+> 📌 *Values depend on runtime hardware (e.g., Colab GPU, local CPU) and batch size.*
 
