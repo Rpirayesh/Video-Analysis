@@ -47,11 +47,11 @@ OpenCV + yt-dlp + ffmpeg
 1. Install All Dependencies
 python
 
-# Run the script or notebook directly
-# It will:
-# - Uninstall conflicts
-# - Install PyTorch, Whisper, YOLO, etc.
-# - Install ffmpeg for audio/video processing
+ Run the script or notebook directly
+ It will:
+ Uninstall conflicts
+Install PyTorch, Whisper, YOLO, etc.
+Install ffmpeg for audio/video processing
 📌 Make sure your runtime supports CUDA (GPU). The script checks and uses CUDA if available.
 
 🧪 Inference Pipeline
@@ -97,13 +97,8 @@ Final output is a video:
 ✨ Ready for visualization, research, or deployment
 
 📁 Directory Structure
+<pre> ├── optimized_models/ │ ├── yolov5n_fp32.onnx # YOLOv5n exported in ONNX FP32 │ └── yolov5n_int8_dynamic.onnx # YOLOv5n quantized to INT8 ONNX ├── inf_vid.mp4 # Downloaded YouTube video for analysis ├── cap_vid_final_audio.mp4 # Final output with scene, object, and speech overlays └── dummy_audio_p1.wav # Dummy audio used for benchmarking Whisper </pre>
 
-├── optimized_models/
-│   ├── yolov5n_fp32.onnx
-│   └── yolov5n_int8_dynamic.onnx
-├── inf_vid.mp4             # Downloaded input video
-├── cap_vid_final_audio.mp4 # Final output with annotations
-└── dummy_audio_p1.wav      # Dummy input for benchmarking
 📊 Benchmarking Example
 Model	Avg Latency (ms)	Size (MB)
 GIT (PT)	~XX	~XXX
